@@ -1,0 +1,29 @@
+{
+  "name": "vuejs-pagination-semantic-ui",
+  "description": "Server-side paging component in vue, template based on Semantic-UI",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Vinayak Kulkarni <vinayak.kulkarni@live.com>",
+  "private": false,
+  "keywords": [
+    "vue2",
+    "vuejs",
+    "semantic-ui",
+    "pagination",
+    "paginate",
+    "vuejs-pagination",
+    "vuejs2"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinayakkulkarni/vuejs-pagination-semantic-ui.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vinayakkulkarni/vuejs-pagination-semantic-ui/issues"
+  },
+  "homepage": "https://github.com/vinayakkulkarni/vuejs-pagination-semantic-ui#readme"
+}
