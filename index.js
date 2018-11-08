@@ -1,7 +1,7 @@
 export default {
     template: `<div class="ui pagination menu">
-      <a v-if="showPrevious() || currentPage <= 1" :class="{ 'disabled' : currentPage <= 1 }" class="item">
-        {{ config.previousText }}
+      <a v-if="currentPage > 2" @click.prevent="changePage(1)" class="item">
+        {{ config.firstText }}
       </a>
       <a v-if="currentPage > 1" @click.prevent="changePage(currentPage - 1)" class="item">
         {{ config.previousText }}
@@ -9,11 +9,11 @@ export default {
       <a v-for="num in array" :class="{ 'active': num === currentPage }" class="item" @click.prevent="changePage(num)">
         {{ num }}
       </a>
-      <a v-if="showNext() || currentPage === lastPage || lastPage === 0" :class="{ 'disabled' : currentPage === lastPage || lastPage === 0 }" class="item">
+      <a v-if="currentPage < lastPage - 1" @click.prevent="changePage(currentPage + 1)" class="item">
         {{ config.nextText }}
       </a>
-      <a v-if="currentPage < lastPage" @click.prevent="changePage(currentPage + 1)" class="item">
-        {{ config.nextText }}
+      <a v-if="currentPage < lastPage" @click.prevent="changePage(lastPage)" class="item">
+        {{ config.lastText }}
       </a>
     </div>`,
     props: {
@@ -74,8 +74,10 @@ export default {
         config() {
             return Object.assign({
                 offset: 2,
-                previousText: '«',
-                nextText: '»',
+                previousText: '‹',
+                nextText: '›',
+                firstText: '«',
+                lastText: '»',
                 alwaysShowPrevNext: true
             }, this.options);
         }

@@ -14,7 +14,7 @@ $ npm install vuejs-pagination-semantic-ui
 ### :white_check_mark: Usage :mortar_board:
 ```js
 import pagination from 'vuejs-pagination-semantic-ui'
-    
+
 new Vue({
   el: '#app',,
   components: { pagination }
@@ -26,12 +26,14 @@ new Vue({
 		    offset: 2,
         previousText: 'Prev',
         nextText: 'Next',
+        firstText: 'First',
+        lastText: 'Last',
         alwaysShowPrevNext: true
       }
     }
   },
   methods: {
-    pageChanged (page) {            
+    pageChanged (page) {
       console.log(page)
       // Exec your response to server passing 'page' params as clicked button paging
     }
@@ -39,7 +41,7 @@ new Vue({
 })
 ```
 
-### :white_check_mark: Example :four_leaf_clover: 
+### :white_check_mark: Example :four_leaf_clover:
 
 ```html
 <body id="app">
@@ -48,22 +50,24 @@ new Vue({
 </body>
 ```
 
-### :white_check_mark: :book: Props: 
+### :white_check_mark: :book: Props:
 | Name          | Type     | Default | Required | Description
 | :------------ | :--------| :-------| :--------| :-----------
 | total         | Number   |         | true     | Total items in server side
 | pageSize      | Number   |         | true     | Number of items in page
 | callback      | Function |         | true     | Callback function used to load data for selected page
 
-### :white_check_mark: :book: Options: 
+### :white_check_mark: :book: Options:
 | Name                | String  | Default     | Description
 | :-------------------| :-------| :-----------| :-------
 | offset              | Number  | 3           | Left and right offset of pagination numbers to display
-| previousText        | String  | «           | Change default previous button text
-| nextText            | String  | »           | Change default next button text
+| previousText        | String  | ‹           | Change default previous button text
+| nextText            | String  | ›           | Change default next button text
+| firstText           | String  | «           | Change default first button text
+| lastText            | String  | »           | Change default last button text
 | alwaysShowPrevNext  | Boolean | false       | Show prev/next button even if on first/last page
 
-## NPM :octocat:  
+## NPM :octocat:
 
 [![NPM](https://nodei.co/npm/vuejs-pagination-semantic-ui.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vuejs-pagination-semantic-ui/)
 
